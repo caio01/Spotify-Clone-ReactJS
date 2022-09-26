@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+.div-logo > a > img{
+    margin-top: 4%;
+    margin-bottom: 2%;
+    width: 15%;
+}
+
+.div-title {
+    font-size: 18px;
+}
+
+.div-img-sing-up{
+    width: 450px;
+    margin: 0 auto;
+}
+
+.div-img-sing-up-facebook > a > img{
+    transition: 0.4s;
+}
+
+.div-img-sing-up-facebook > a > img:hover{
+    width: 450px;
+}
+
+.div-img-sing-up-google > a > img{
+    transition: 0.4s;
+}
+
+.div-img-sing-up-google > a > img:hover{
+    width: 425px;
+}
+
+.div-line-or{
+    width: 450px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.div-line-1{
+	height:2px;
+    width: 200px;
+	margin: 30px 25px 0 auto;
+	background-color:rgba(0, 0, 0, 0.145);
+}
+
+.div-or{
+    margin: 18px 0 0 0;
+}
+
+.div-line-2{
+	height:2px;
+    width: 200px;
+	margin: 30px auto 0 25px;
+	background-color:rgba(0, 0, 0, 0.145);
+}
+
+.div-form{
+    max-width: 450px;
+    margin: 0px auto;
+    text-align: left;
+    font-size: 14px;
+}
+
+.form-cmp > h3{
+    font-size: 12pt;
+    font-weight: 600;
+    margin: 20px 0 5px 10px;
+}
+
+.form-cmp > input{
+    margin: 0 0 15px 0;
+    padding: 10px;
+    width: 95%;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+.form-cmp-birth{
+    width: 95%;
+    display: flex;
+}
+
+.form-cmp:nth-child(5){
+    width: 120%;
+}
+
+.form-cmp-birth > div > h3{
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+.form-cmp > div > div > h3{
+    margin: 5px 0 3px 10px;
+}
+
+.form-cmp > div > div > input{
+    margin: 0 0 15px 0;
+    padding: 10px;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+.form-cmp-sex{
+    display: flex;
+    margin: 10px 0 30px 5px;
+}
+
+.form-cmp:nth-child(6){
+    width: 120%;
+}
+
+.form-cmp-sex > h3{
+    font-size: 16px;
+    margin: 0 60px 0 3px;
+}
+
+.div-checkbox{
+    display: flex;
+}
+
+.div-checkbox > h3{
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+.div-checkbox:nth-child(1) > input{
+    margin: 0 5px 10px 0;
+}
+
+.div-checkbox:nth-child(2) > input{
+    margin: 0 5px 25px 0;
+}
+
+.div-checkbox:nth-child(3) > input{
+    margin: 0 5px 25px 0;
+}
+
+.div-btn{
+    text-align: center;
+    margin: 30px 0 50px 0;
+}
+
+.div-btn > a > button{
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    width: 200px;
+    height: 60px;
+    background-color: rgb(129, 177, 67);
+    color:rgb(0, 0, 0);
+    border-radius: 30px;
+    border-color: rgb(166, 211, 107);
+}
+
+.div-btn > a > button:hover{
+    width: 210px;
+    height: 62px;
+}

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+#header {
+  position: absolute;
+  width: 220px;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+  
+#header .closemenu {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: 0;
+  z-index: 9999;
+  line-height: 20px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 10px 5px 0 0;
+}
+
+#header .pro-sidebar {
+  width: 100%;
+  min-width: 100%;
+}
+
+#header .pro-sidebar.collapsed {
+  width: 80px;
+  min-width: 80px;
+}
+
+#header .pro-sidebar-inner .pro-sidebar-layout {
+  overflow-y: hidden;
+}
+
+
+#header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item {
+  color: rgb(255, 255, 255);
+  margin: 20px 0px;
+  font-weight: bold;
+}
+
+#header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .pro-icon-wrapper {
+  background-color: #272727;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+#header .pro-sidebar-inner .pro-sidebar-layout .active {
+  background-color: rgba(0, 0, 0, 0.33);
+  border-radius: 10px;
+  margin: 0 5px 0 3px;
+}
+
+@media only screen and (max-width: 720px) {
+  html {
+    overflow: hidden;
+  }
+}

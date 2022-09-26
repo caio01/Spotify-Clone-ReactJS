@@ -1,0 +1,16 @@
+.navbar {
+	background-color: rgb(32, 32, 32);
+}
+
+a.nav-link,
+a.navbar-brand {
+	color: white;
+}
+a.navbar-brand svg {
+	margin: 0 8px 0 0;
+	width: 2rem;
+}
+
+nav.navbar a:hover {
+	color: #1ed760;
+}

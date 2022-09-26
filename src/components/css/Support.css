@@ -1,0 +1,30 @@
+h1.title {
+	margin: 5rem auto 3rem auto;
+	text-align: center;
+}
+h1 a,
+h1 a:hover {
+	text-decoration: none;
+	color: black;
+	font-weight: 600;
+}
+h1 img {
+	width: 3rem;
+}
+
+h2 {
+	text-align: center;
+}
+table {
+	max-width: 960px;
+	margin: 2rem auto;
+}
+
+td.pergunta,
+td.resposta {
+	border: 1px solid black;
+	padding: 1rem;
+}
+.pergunta {
+	background-color: #f2f2f2;
+}

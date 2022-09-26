@@ -1,0 +1,26 @@
+footer {
+	background-color: black;
+	color: white;
+	font-weight: 500;
+	padding: 3rem 0;
+}
+.footer__container--flex {
+	display: flex;
+	justify-content: space-around;
+}
+.empresa__list,
+.comunidades__list,
+.uteis__list {
+	list-style: none;
+}
+
+.empresa__item--title,
+.comunidades__item--title,
+.uteis__item--title {
+	color: #919496;
+}
+.empresa__list li,
+.comunidades__list li,
+.uteis__list li {
+	margin-bottom: 1rem;
+}
