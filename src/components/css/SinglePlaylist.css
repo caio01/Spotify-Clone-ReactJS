@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+a {
+    color: rgb(155, 139, 139);
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.content {
+	margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.playlist{
+    display: flex;
+    margin: 20px 0 50px 18%;
+}
+
+.div-musics {
+    margin: 0 0 0 20px;
+}
+
+.music > h7 {
+    color: rgb(105, 101, 101);
+}

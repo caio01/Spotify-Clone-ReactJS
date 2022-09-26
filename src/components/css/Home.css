@@ -19,53 +19,25 @@ a:hover {
 }
 
 .content {
-	margin: 20px 0 50px 80px;
+	margin: 20px 0 50px 15%;
 }
 
 .section-content-title{
     display: flex;
-    align-content: flex-end;
+    margin-top: 20px;
 }
 
 .section-content-title > h1{
-    margin-left: 15px;
+    text-align: left;
+    width: 200px;
+    margin-left: 50px;
     font-size: 18pt;
 }
 
 .section-content-title > h3 > a{
     color:rgb(155, 139, 139);
-    margin-left: 750px;
-    font-size: 15pt;
-}
-
-.section-content-title2{
-    display: flex;
-    align-content: flex-end;
-}
-
-.section-content-title2 > h1{
-    margin-left: 15px;
-    font-size: 18pt;
-}
-
-.section-content-title2 > h3 > a{
-    color:rgb(155, 139, 139);
-    margin-left: 850px;
-    font-size: 15pt;
-}
-
-.section-content-title3{
-    display: flex;
-    align-content: flex-end;
-}
-
-.section-content-title3 > h1{
-    margin-left: 15px;
-}
-
-.section-content-title3 > h3 > a{
-    color:rgb(155, 139, 139);
-    margin-left: 950px;
+    text-align: right;
+    margin-left: 800px;
     font-size: 15pt;
 }
 
@@ -77,12 +49,12 @@ a:hover {
     display: flex;
 }
 
-.section-content-albuns-album > h3 {
+.navbar-brand > h3 {
     margin-top: 10px;
     font-size: 12pt;
 }
 
-.section-content-albuns-album > h4 {
+.navbar-brand > h4 {
     margin-top: 10px;
     font-size: 12pt;
 }

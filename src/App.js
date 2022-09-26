@@ -7,6 +7,7 @@ import Home from "./components/js/Home.js";
 import Support from "./components/js/Support.js";
 import SignUp from "./components/js/SignUp.js";
 import Footer from "./components/js/Footer.js";
+import SinglePlaylist from "./components/js/SinglePlaylist.js";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="support" element={<Support />} />
 				<Route path="signup" element={<SignUp />} />
+				<Route path="singleplaylist" element={<SinglePlaylist />} />
 			</Routes>
 			<Footer />
 		</div>
