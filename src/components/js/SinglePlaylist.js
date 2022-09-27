@@ -1,19 +1,15 @@
 import "./../css/SinglePlaylist.css";
+import ReactAudioPlayer from 'react-audio-player';
 import { Link } from "react-router-dom";
 
 export default function SinglePlaylist() {
 	return (
 		<>
 			<main>
-				<div class="content">
-					<h1 class="title">
-						<Link to="/">
-							<img src="./assets/img/spotify.svg" alt="Spotify" /> Spotify
-						</Link>
-					</h1>
-					<div class="playlist">
-						<div class="desc-playlist">
-							<img class="album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+				<div className="singlePlaylist">
+					<div className="playlist">
+						<div className="desc-playlist">
+							<img className="album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
 							<h3>
 								Playlist 1
 							</h3>
@@ -21,14 +17,74 @@ export default function SinglePlaylist() {
 								Playlist Description
 							</h4>
 						</div>
-						<div class="div-musics">
-							<div class="music">
-								<h3>1. Music 1</h3>
-								<h7>Author - Album</h7>
+						<div className="div-musics">
+							<div className="music-audio">
+								<div className="music">
+									<h3>1. Music 1</h3>
+									<h7>Author - Album</h7>
+								</div>
+								<div className="audio-play">
+									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
+								</div>
 							</div>
-							<div class="music">
-								<h3>2. Music 2</h3>
-								<h7>Author - Album</h7>
+							<div className="music-audio">
+								<div className="music">
+									<h3>2. Music 2</h3>
+									<h7>Author - Album</h7>
+								</div>
+								<div className="audio-play">
+									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
+								</div>
+							</div>
+							<div className="music-audio">
+								<div className="music">
+									<h3>3. Music 3</h3>
+									<h7>Author - Album</h7>
+								</div>
+								<div className="audio-play">
+									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
+								</div>
+							</div>
+							<div className="music-audio">
+								<div className="music">
+									<h3>4. Music 4</h3>
+									<h7>Author - Album</h7>
+								</div>
+								<div className="audio-play">
+									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
+								</div>
+							</div><div className="music-audio">
+								<div className="music">
+									<h3>5. Music 5</h3>
+									<h7>Author - Album</h7>
+								</div>
+								<div className="audio-play">
+									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
+								</div>
+							</div><div className="music-audio">
+								<div className="music">
+									<h3>6. Music 6</h3>
+									<h7>Author - Album</h7>
+								</div>
+								<div className="audio-play">
+									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
+								</div>
+							</div><div className="music-audio">
+								<div className="music">
+									<h3>7. Music 7</h3>
+									<h7>Author - Album</h7>
+								</div>
+								<div className="audio-play">
+									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
+								</div>
+							</div><div className="music-audio">
+								<div className="music">
+									<h3>8. Music 8</h3>
+									<h7>Author - Album</h7>
+								</div>
+								<div className="audio-play">
+									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
 .navbar {
+	font-family: 'Quicksand', sans-serif;
 	background-color: rgb(32, 32, 32);
 }
 

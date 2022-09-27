@@ -5,9 +5,9 @@ export default function Home() {
 	return (
 		<>
 			<main>
-				<div class="body">
-					<section class="content">
-						<div class="section-content-title">
+				<div className="body">
+					<section className="content">
+						<div className="section-content-title">
 							<h1>
 								Spotify Playlists
 							</h1>
@@ -15,10 +15,10 @@ export default function Home() {
 								<a href="#">VER TUDO</a>
 							</h3>
 						</div>
-						<div class="section-content-albuns">
-							<div class="section-content-albuns-album">
-								<Link to="/singleplaylist" class="navbar-brand">
-									<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+						<div className="section-content-albuns">
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
 									<h3>
 										Álbum 1
 									</h3>
@@ -27,9 +27,9 @@ export default function Home() {
 									</h4>
 								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<Link to="/" class="navbar-brand">
-									<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
 									<h3>
 										Álbum 2
 									</h3>
@@ -38,9 +38,9 @@ export default function Home() {
 									</h4>
 								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<Link to="/" class="navbar-brand">
-									<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
 									<h3>
 										Álbum 3
 									</h3>
@@ -49,9 +49,9 @@ export default function Home() {
 									</h4>
 								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<Link to="/" class="navbar-brand">
-									<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
 									<h3>
 										Álbum 4
 									</h3>
@@ -60,9 +60,9 @@ export default function Home() {
 									</h4>
 								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<Link to="/" class="navbar-brand">
-									<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
 									<h3>
 										Álbum 5
 									</h3>
@@ -72,7 +72,7 @@ export default function Home() {
 								</Link>
 							</div>
 						</div>
-						<div class="section-content-title">
+						<div className="section-content-title">
 							<h1>
 								100% você
 							</h1>
@@ -80,54 +80,64 @@ export default function Home() {
 								<a href="#">VER TUDO</a>
 							</h3>
 						</div>
-						<div class="section-content-albuns">
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 1
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+						<div className="section-content-albuns">
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 1
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 2
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 2
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 3
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 3
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 4
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 4
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 5
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 5
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
 						</div>
-						<div class="section-content-title">
+						<div className="section-content-title">
 							<h1>
 								Foco
 							</h1>
@@ -135,54 +145,64 @@ export default function Home() {
 								<a href="#">VER TUDO</a>
 							</h3>
 						</div>
-						<div class="section-content-albuns">
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 1
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+						<div className="section-content-albuns">
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 1
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 2
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 2
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 3
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 3
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 4
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 4
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 5
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 5
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
 						</div>
-						<div class="section-content-title">
+						<div className="section-content-title">
 							<h1>
 								Seu astral
 							</h1>
@@ -190,51 +210,61 @@ export default function Home() {
 								<a href="#">VER TUDO</a>
 							</h3>
 						</div>
-						<div class="section-content-albuns">
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 1
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+						<div className="section-content-albuns">
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 1
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 2
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 2
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 3
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 3
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 4
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 4
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
-							<div class="section-content-albuns-album">
-								<img class="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-								<h3>
-									Álbum 5
-								</h3>
-								<h4>
-									Descrição do Álbum
-								</h4>
+							<div className="section-content-albuns-album">
+								<Link to="/singleplaylist" className="navbar-brand">
+									<img className="section-content-albuns-album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
+									<h3>
+										Álbum 5
+									</h3>
+									<h4>
+										Descrição do Álbum
+									</h4>
+								</Link>
 							</div>
 						</div>
 					</section>

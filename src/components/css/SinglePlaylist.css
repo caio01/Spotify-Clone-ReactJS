@@ -10,20 +10,55 @@ a:hover {
     color: #ffffff;
 }
 
-.content {
-	margin: 0;
+.singlePlaylist {
     font-family: 'Quicksand', sans-serif;
 }
 
 .playlist{
     display: flex;
-    margin: 20px 0 50px 18%;
+    margin: 7% 0 50px 17%;
+}
+
+.desc-playlist > h3 {
+    margin-top: 20px;;
+}
+
+.album-img {
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.328);
 }
 
 .div-musics {
-    margin: 0 0 0 20px;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 0 10%;
+}
+
+.music-audio {
+    width: 600px;
+    display: flex;
+    border-radius: 100px;
+}
+
+.music-audio:hover {
+    background-color: rgba(255, 255, 255, 0.126);
+    transition: 0.5s;
+}
+
+.music {
+    width: 100%;
+}
+
+.music > h3{
+    margin-left: 20px;
 }
 
 .music > h7 {
     color: rgb(105, 101, 101);
+    margin-left: 20px;
+}
+
+.audio-play {
+    float: right;
+    margin: 8px 20px 0 0;
 }

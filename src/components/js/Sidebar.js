@@ -26,35 +26,15 @@ import "react-pro-sidebar/dist/css/styles.css";
 
 const Header = () => {
   
-  //create initial menuCollapse state using useState hook
-  var [menuCollapse, setMenuCollapse] = useState(false)
-
-  //create a custom function that will change menucollapse state from false to true and true to false
-	var menuIconClick = () => {
-		//condition checking to change state from true to false and vice versa
-		menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
-	};
-
   return (
     <>
-      <div id="header">
-          {/* collapsed props to change menu size using menucollapse state */}
-        <ProSidebar collapsed={menuCollapse}>
-          <SidebarHeader>
-            <div className="closemenu" onClick={menuIconClick}>
-                {/* changing menu collapse icon on click */}
-              {menuCollapse ? (
-                <FiArrowRightCircle/>
-              ) : (
-                <FiArrowLeftCircle/>
-              )}
-            </div>
-          </SidebarHeader>
+      <div className="side">
+        <ProSidebar>
           <SidebarContent>
             <Menu iconShape="square">
               <MenuItem icon={<FiHome />}><Link to="/" />Home</MenuItem>
               <MenuItem icon={<FaList />}>Playlists</MenuItem>
-              <MenuItem icon={<FaRegHeart />}>Músicas Curtidas</MenuItem>
+              <MenuItem icon={<FaRegHeart />}>Likes Musics</MenuItem>
               <MenuItem icon={<RiPencilLine />}>FAQ</MenuItem>
               <MenuItem icon={<BiCog />}>Settings</MenuItem>
             </Menu>
