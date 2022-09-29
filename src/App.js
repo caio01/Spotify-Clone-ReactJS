@@ -19,7 +19,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="support" element={<Support />} />
 					<Route path="signup" element={<SignUp />} />
-					<Route path="singleplaylist" element={<SinglePlaylist />} />
+					<Route path="singleplaylist/:idCollection/:idPlaylist" element={<SinglePlaylist />} />
 				</Routes>
 			</div>
 			<Footer />

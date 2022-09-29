@@ -29,7 +29,7 @@ a:hover {
 
 .section-content-title > h1{
     text-align: left;
-    width: 200px;
+    width: 600px;
     margin-left: 50px;
     font-size: 18pt;
 }
@@ -37,7 +37,7 @@ a:hover {
 .section-content-title > h3 > a{
     color:rgb(155, 139, 139);
     text-align: right;
-    margin-left: 800px;
+    margin-left: 400px;
     font-size: 15pt;
 }
 
@@ -55,6 +55,7 @@ a:hover {
 }
 
 .navbar-brand > h4 {
+    color: #7e7e7e;
     margin-top: 10px;
     font-size: 12pt;
 }
@@ -80,6 +81,6 @@ a:hover {
     width: 80%;
     margin-top: 15px;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.435);
+    box-shadow: rgba(0, 0, 0, 0.435) 0px 8px 24px, rgba(0, 0, 0, 0.435) 0px 8px 24px, rgba(0, 0, 0, 0.435) 0px 8px 24px;
     transition: 0.4s;
 }

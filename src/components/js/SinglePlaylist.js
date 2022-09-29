@@ -1,93 +1,49 @@
 import "./../css/SinglePlaylist.css";
 import ReactAudioPlayer from 'react-audio-player';
 import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom';
+import collections from "./json.js";
 
 export default function SinglePlaylist() {
+
+	var { idCollection, idPlaylist } = useParams();
+	idCollection -= 1;
+	idPlaylist = idPlaylist % 5;
+
+	const musics = collections[idCollection].playlistsList[idPlaylist].musics.map((m) => (
+			<div className="music-audio">
+				<div className="music">
+					<h3>{m.id}. {m.musicname}</h3>
+					<h7>{m.author} {m.album}</h7>
+				</div>
+				<div className="audio-play">
+					<ReactAudioPlayer src={m.src} controls/>
+				</div>
+			</div>
+	));
+
+	const data = (
+			<div className="playlist">
+				<div className="desc-playlist">
+					<img className="album-img" src={collections[idCollection].playlistsList[idPlaylist].cover} alt="capa-album"/>
+					<h3>
+						{collections[idCollection].playlistsList[idPlaylist].name}
+					</h3>
+					<h4>
+						{collections[idCollection].playlistsList[idPlaylist].desc}
+					</h4>
+				</div>
+				<div className="div-musics">
+					{musics}
+				</div>
+			</div>
+	);
+
 	return (
 		<>
 			<main>
 				<div className="singlePlaylist">
-					<div className="playlist">
-						<div className="desc-playlist">
-							<img className="album-img" src="./assets/img/capa-album.png" alt="capa-album"/>
-							<h3>
-								Playlist 1
-							</h3>
-							<h4>
-								Playlist Description
-							</h4>
-						</div>
-						<div className="div-musics">
-							<div className="music-audio">
-								<div className="music">
-									<h3>1. Music 1</h3>
-									<h7>Author - Album</h7>
-								</div>
-								<div className="audio-play">
-									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
-								</div>
-							</div>
-							<div className="music-audio">
-								<div className="music">
-									<h3>2. Music 2</h3>
-									<h7>Author - Album</h7>
-								</div>
-								<div className="audio-play">
-									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
-								</div>
-							</div>
-							<div className="music-audio">
-								<div className="music">
-									<h3>3. Music 3</h3>
-									<h7>Author - Album</h7>
-								</div>
-								<div className="audio-play">
-									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
-								</div>
-							</div>
-							<div className="music-audio">
-								<div className="music">
-									<h3>4. Music 4</h3>
-									<h7>Author - Album</h7>
-								</div>
-								<div className="audio-play">
-									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
-								</div>
-							</div><div className="music-audio">
-								<div className="music">
-									<h3>5. Music 5</h3>
-									<h7>Author - Album</h7>
-								</div>
-								<div className="audio-play">
-									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
-								</div>
-							</div><div className="music-audio">
-								<div className="music">
-									<h3>6. Music 6</h3>
-									<h7>Author - Album</h7>
-								</div>
-								<div className="audio-play">
-									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
-								</div>
-							</div><div className="music-audio">
-								<div className="music">
-									<h3>7. Music 7</h3>
-									<h7>Author - Album</h7>
-								</div>
-								<div className="audio-play">
-									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
-								</div>
-							</div><div className="music-audio">
-								<div className="music">
-									<h3>8. Music 8</h3>
-									<h7>Author - Album</h7>
-								</div>
-								<div className="audio-play">
-									<ReactAudioPlayer src="./assets/audio/music.mp3" controls/>
-								</div>
-							</div>
-						</div>
-					</div>
+					{data}
 				</div>
 			</main>
 		</>
