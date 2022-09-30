@@ -2,13 +2,16 @@ import "./../css/SinglePlaylist.css";
 import ReactAudioPlayer from 'react-audio-player';
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
-import collections from "./json.js";
+import collections from "./services/json.js";
 
 export default function SinglePlaylist() {
 
 	var { idCollection, idPlaylist } = useParams();
 	idCollection -= 1;
 	idPlaylist = idPlaylist % 5;
+	
+	const prefixImg = "./../../assets/img/";
+	const prefixMsc = "./../../assets/audio/";
 
 	const musics = collections[idCollection].playlistsList[idPlaylist].musics.map((m) => (
 			<div className="music-audio">
@@ -17,7 +20,7 @@ export default function SinglePlaylist() {
 					<h7>{m.author} {m.album}</h7>
 				</div>
 				<div className="audio-play">
-					<ReactAudioPlayer src={m.src} controls/>
+					<ReactAudioPlayer src={prefixMsc + m.src} controls/>
 				</div>
 			</div>
 	));
@@ -25,7 +28,7 @@ export default function SinglePlaylist() {
 	const data = (
 			<div className="playlist">
 				<div className="desc-playlist">
-					<img className="album-img" src={collections[idCollection].playlistsList[idPlaylist].cover} alt="capa-album"/>
+					<img className="album-img" src={prefixImg + collections[idCollection].playlistsList[idPlaylist].cover} alt="capa-album"/>
 					<h3>
 						{collections[idCollection].playlistsList[idPlaylist].name}
 					</h3>

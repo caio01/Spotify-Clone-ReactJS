@@ -1,9 +1,12 @@
 import "./../css/Home.css";
 import { Link } from "react-router-dom";
-import collections from "./json.js";
+import collections from "./services/json.js";
+import React, { useEffect, useState } from "react";
+import api from './../js/services/api.js';
 
 function Home() {
 
+	
 	const data = collections.map((c) => (
 		<div>
 			<div className="section-content-title">
@@ -18,7 +21,7 @@ function Home() {
 				{(c.playlistsList).map((p) => (
 					<div className="section-content-albuns-album">
 						<Link to={`/singleplaylist/${c.id}/${(p.id)-1}`} className="navbar-brand">
-							<img className="section-content-albuns-album-img" src={p.cover} alt="capa-album" />
+							<img className="section-content-albuns-album-img" src={"./assets/img/" + p.cover} alt="capa-album" />
 							<h3>
 								{p.name}
 							</h3>
