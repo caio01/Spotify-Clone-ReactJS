@@ -1,12 +1,9 @@
 import "./../css/Home.css";
 import { Link } from "react-router-dom";
 import collections from "./services/json.js";
-import React, { useEffect, useState } from "react";
-import api from './../js/services/api.js';
 
 function Home() {
 
-	
 	const data = collections.map((c) => (
 		<div>
 			<div className="section-content-title">
