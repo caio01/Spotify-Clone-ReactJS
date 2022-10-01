@@ -1,6 +1,5 @@
 import "./../css/SinglePlaylist.css";
 import ReactAudioPlayer from 'react-audio-player';
-import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import collections from "./services/json.js";
 

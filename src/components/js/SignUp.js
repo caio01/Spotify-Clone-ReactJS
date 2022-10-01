@@ -2,6 +2,7 @@ import "./../css/SignUp.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { postUser } from "./services/api.js"
+import encrypt from "./services/encrypt.js";
 
 function SignUp() {
 
@@ -24,11 +25,10 @@ function SignUp() {
             const data = {
                 "name": name,
                 "email": email,
-                "password": password,
+                "password": encrypt(password),
                 "dateBirth": dateBirth,
                 "gender": gender
               }
-
             postUser(data);
             resetForm();
             alert('User registered successfully');
