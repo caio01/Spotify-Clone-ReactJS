@@ -1,7 +1,7 @@
 import "./../css/SignUp.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { post } from "./services/api.js"
+import { postUser } from "./services/api.js"
 
 function SignUp() {
 
@@ -29,7 +29,7 @@ function SignUp() {
                 "gender": gender
               }
 
-            post(data);
+            postUser(data);
             resetForm();
             alert('User registered successfully');
         } else {

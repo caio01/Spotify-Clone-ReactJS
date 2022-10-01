@@ -1,8 +1,49 @@
 import "./../css/Home.css";
 import { Link } from "react-router-dom";
 import collections from "./services/json.js";
+//import React, { useEffect, useState } from "react";
+//import { getCollections, getPlaylists, getMusics } from "./services/api.js"
 
 function Home() {
+	
+	/*
+	const [c, setC] = useState();
+	const [p, setP] = useState();
+	const [m, setM] = useState();
+
+	useEffect(() => {
+		getCollections
+		.then((response) => (
+			setC(response.data.results)
+		))
+		.catch((err) => {
+			console.error("ops! ocorreu um erro" + err);
+		});
+	}, []);
+
+	useEffect(() => {
+		getPlaylists
+		.then((response) => (
+			setP(response.data.results)
+		))
+		.catch((err) => {
+			console.error("ops! ocorreu um erro" + err);
+		});
+	}, []);
+
+	useEffect(() => {
+		getMusics
+		.then((response) => (
+			setM(response.data)
+		))
+		.catch((err) => {
+			console.error("ops! ocorreu um erro" + err);
+		});
+	}, []);
+
+	//console.log(p.map((y)=>y).filter((obj) => obj.id < 6));
+	console.log(c.map((y)=>y.playlists).filter((obj) => obj));
+	*/
 
 	const data = collections.map((c) => (
 		<div>

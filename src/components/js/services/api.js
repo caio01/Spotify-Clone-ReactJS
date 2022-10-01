@@ -1,10 +1,32 @@
 import axios from 'axios';
 
-const api = axios.create({
-    baseURL: 'https://gist.githubusercontent.com/caio01/0203fac18d47f333f749c49df124702e/raw/180d734fa0ffbeb9e56930990beb558bea089275/data.json'
+/*
+export const getCollections = axios({
+    method: "GET",
+    url: "https://api.baserow.io/api/database/rows/table/103740/?user_field_names=true",
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"
+    }
+  });
+
+export const getPlaylists = axios({
+  method: "GET",
+  url: "https://api.baserow.io/api/database/rows/table/103741/?user_field_names=true",
+  headers: {
+    Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"
+  }
 });
 
-export function post(data) {
+export const getMusics = axios({
+  method: "GET",
+  url: "https://api.baserow.io/api/database/rows/table/103742/200/?user_field_names=true",
+  headers: {
+    Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"
+  }
+});
+*/
+
+export function postUser(data) {
     axios({
             method: "POST",
             url: "https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true",
@@ -15,15 +37,3 @@ export function post(data) {
             data : data
         })
 }
-
-export function get() {
-    axios({
-        method: "GET",
-        url: "https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true",
-        headers: {
-          Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"
-        }
-      })
-}
-
-export default api;
