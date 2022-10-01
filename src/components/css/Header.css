@@ -14,6 +14,10 @@ a.navbar-brand svg {
 	width: 2rem;
 }
 
+.nav-link:focus, a.navbar-brand:focus {
+	color: white;
+}
+
 nav.navbar a:hover {
 	color: #1ed760;
 }
