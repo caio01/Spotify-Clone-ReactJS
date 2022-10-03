@@ -2,8 +2,9 @@
 
 .support {
 	text-align: center;
-    background-color: white;
+    background-color: rgb(65, 61, 61);
 	font-family: 'Quicksand', sans-serif;
+	color: white;
 }
 
 .div-support {
@@ -20,12 +21,13 @@ h1.title {
 
 h1 a, h1 a:hover {
 	text-decoration: none;
-	color: black;
+	color: rgb(255, 255, 255);
 	font-weight: 600;
 }
 
 h1 img {
-	width: 3rem;
+	color: white;
+	width: 15rem;
 }
 
 table {
@@ -34,10 +36,10 @@ table {
 }
 
 td.pergunta, td.resposta {
-	border: 1px solid black;
+	border: 1px solid rgb(255, 255, 255);
 	padding: 1rem;
 }
 
 .pergunta {
-	background-color: #f2f2f2;
+	background-color: #858585;
 }

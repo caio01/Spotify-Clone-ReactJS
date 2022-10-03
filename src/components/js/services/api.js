@@ -27,13 +27,23 @@ export const getMusics = axios({
 */
 
 export function postUser(data) {
-    axios({
-            method: "POST",
-            url: "https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true",
-            headers: {
-                Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
-                "Content-Type": "application/json"
-            },
-            data : data
-        })
+  axios({
+    method: "POST",
+    url: "https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true",
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    },
+    data : data
+  })
+}
+
+export function getUser() {
+  axios({
+    method: "GET",
+    url: "https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true",
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"
+    }
+  })
 }

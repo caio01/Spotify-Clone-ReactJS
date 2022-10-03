@@ -5,6 +5,10 @@
 	background-color: rgb(32, 32, 32);
 }
 
+.navbar-logo{
+	width: 8rem;
+}
+
 a.nav-link,
 a.navbar-brand {
 	color: white;

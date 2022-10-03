@@ -2,7 +2,8 @@
 
 .signup-content {
     text-align: center;
-    background-color: white;
+    background-color: rgb(65, 61, 61);
+    color: white;
     width: 100%;
     height: 100%;
     padding: 0 0 20px 0;
@@ -19,27 +20,6 @@
     font-size: 18px;
 }
 
-.div-img-sing-up{
-    width: 450px;
-    margin: 0 auto;
-}
-
-.div-img-sing-up-facebook > a > img{
-    transition: 0.4s;
-}
-
-.div-img-sing-up-facebook > a > img:hover{
-    width: 450px;
-}
-
-.div-img-sing-up-google > a > img{
-    transition: 0.4s;
-}
-
-.div-img-sing-up-google > a > img:hover{
-    width: 425px;
-}
-
 .div-line-or{
     width: 450px;
     display: flex;
@@ -50,7 +30,7 @@
 	height:2px;
     width: 200px;
 	margin: 30px 25px 0 auto;
-	background-color:rgba(0, 0, 0, 0.145);
+	background-color:rgba(255, 255, 255, 0.145);
 }
 
 .div-or{
@@ -61,7 +41,7 @@
 	height:2px;
     width: 200px;
 	margin: 30px auto 0 25px;
-	background-color:rgba(0, 0, 0, 0.145);
+	background-color:rgba(255, 255, 255, 0.145);
 }
 
 .div-form{
@@ -83,6 +63,7 @@
     width: 95%;
     font-size: 18px;
     border-radius: 50px;
+    border-color: rgba(0, 0, 0, 0.478);
 }
 
 .form-cmp-birth{
@@ -101,6 +82,7 @@
 
 .form-cmp > div > div > h3{
     margin: 5px 0 3px 10px;
+    color: rgb(221, 221, 221);
 }
 
 .form-cmp > div > div > input{
@@ -109,6 +91,7 @@
     width: 50%;
     font-size: 18px;
     border-radius: 50px;
+    border-color: rgba(0, 0, 0, 0.478);
 }
 
 .form-cmp-sex{
@@ -160,7 +143,7 @@
     background-color: rgb(129, 177, 67);
     color:rgb(0, 0, 0);
     border-radius: 30px;
-    border-color: rgb(166, 211, 107);
+    border-color: rgba(0, 0, 0, 0.409);
 }
 
 .div-btn > button:hover{

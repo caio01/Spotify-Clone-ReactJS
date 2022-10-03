@@ -31,7 +31,7 @@ const Header = () => {
               <MenuItem icon={<FiHome />}><Link to="/" />Home</MenuItem>
               <MenuItem icon={<FaList />}>Playlists</MenuItem>
               <MenuItem icon={<FaRegHeart />}>Likes Musics</MenuItem>
-              <MenuItem icon={<RiPencilLine />}>FAQ</MenuItem>
+              <MenuItem icon={<RiPencilLine />}><Link to="/support" />FAQ</MenuItem>
               <MenuItem icon={<BiCog />}>Settings</MenuItem>
             </Menu>
           </SidebarContent>

@@ -1,8 +1,8 @@
 import "./../css/SignUp.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { postUser } from "./services/api.js"
-import encrypt from "./services/encrypt.js";
+import { postUser } from "./services/api.js";
+import crypt from "./services/crypt.js";
 
 function SignUp() {
 
@@ -25,7 +25,7 @@ function SignUp() {
             const data = {
                 "name": name,
                 "email": email,
-                "password": encrypt(password),
+                "password": crypt(password),
                 "dateBirth": dateBirth,
                 "gender": gender
               }
@@ -62,14 +62,6 @@ function SignUp() {
                 <div className="div-title">
                     <h1>Inscreva-se grátis e comece a curtir.</h1>
                 </div>
-                <div className="div-img-sing-up">
-                    <div className="div-img-sing-up-facebook">
-                        <Link to={"/"}><img src="./assets/img/sign-up-facebook.png" alt="sign-up-facebook"/></Link>
-                    </div>
-                    <div className="div-img-sing-up-google">
-                        <Link to={"/"}><img src="./assets/img/sign-up-google.png" alt="sign-up-google"/></Link>
-                    </div>
-                </div>
                 <div className="div-line-or">
                     <div className="div-line-1"></div>
                     <div className="div-or">ou</div>
@@ -94,7 +86,7 @@ function SignUp() {
                             <input type="text" placeholder="Insira um nome de perfil." value={name} onChange={(e)=>setName(e.target.value)}/>
                         </div>
                         <div className="form-cmp">
-                            <h3>Qual a sua data de Birthimento?</h3>
+                            <h3>Qual a sua data de nascimento?</h3>
                             <div className="form-cmp-birth">
                                 <div>
                                     <h3>Dia</h3>

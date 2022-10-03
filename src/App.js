@@ -8,6 +8,7 @@ import Sidebar from "./components/js/Sidebar.js";
 import Home from "./components/js/Home.js";
 import Support from "./components/js/Support.js";
 import SignUp from "./components/js/SignUp.js";
+import Login from "./components/js/Login.js";
 import Footer from "./components/js/Footer.js";
 import SinglePlaylist from "./components/js/SinglePlaylist.js";
 
@@ -21,6 +22,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="support" element={<Support />} />
 					<Route path="signup" element={<SignUp />} />
+					<Route path="login" element={<Login />} />
 					<Route path="singleplaylist/:idCollection/:idPlaylist" element={<SinglePlaylist />} />
 				</Routes>
 			</div>

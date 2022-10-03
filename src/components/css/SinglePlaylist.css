@@ -17,10 +17,15 @@ a:hover {
 .playlist{
     display: flex;
     margin: 7% 0 50px 17%;
+    color: #ffffff;
 }
 
 .desc-playlist > h3 {
-    margin-top: 20px;;
+    margin-top: 20px;
+}
+
+.desc-playlist > h4 {
+    color: #bab9b9;
 }
 
 .album-img {
@@ -54,7 +59,7 @@ a:hover {
 }
 
 .music > h7 {
-    color: rgb(105, 101, 101);
+    color: #bab9b9;
     margin-left: 20px;
 }
 

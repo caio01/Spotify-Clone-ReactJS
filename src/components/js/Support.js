@@ -9,7 +9,7 @@ export default function Support() {
 					<div className="div-support">
 						<h1 className="title">
 							<Link to="/">
-								<img src="./assets/img/spotify.svg" alt="Spotify" /> Spotify
+								<img src="./assets/img/logo-spotify.png" alt="Spotify" />
 							</Link>
 						</h1>
 						<h2>Perguntas Frequentes</h2>
