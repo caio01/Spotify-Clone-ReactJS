@@ -8,7 +8,7 @@ export default function Header() {
 				<nav className="navbar navbar-expand-lg">
 					<div className="container-fluid">
 						<Link to="/" className="navbar-brand">
-							<img className="navbar-logo" src="./assets/img/logo-spotify.png"/>
+							<img className="navbar-logo" src="./assets/img/logo-spotify.png" alt="logo-spotify"/>
 						</Link>
 						<button
 							className="navbar-toggler"
