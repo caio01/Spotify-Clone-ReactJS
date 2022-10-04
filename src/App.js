@@ -11,6 +11,7 @@ import SignUp from "./components/js/SignUp.js";
 import Login from "./components/js/Login.js";
 import Footer from "./components/js/Footer.js";
 import SinglePlaylist from "./components/js/SinglePlaylist.js";
+import Teste from "./components/js/Teste.js";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 			<div className="div">
 				<Sidebar className="sidebar"/>
 				<Routes>
+					<Route path="/teste" element={<Teste />} />
 					<Route path="/" element={<Home />} />
 					<Route path="support" element={<Support />} />
 					<Route path="signup" element={<SignUp />} />

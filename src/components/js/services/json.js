@@ -6,7 +6,7 @@ export const collections = [
         id: 1,
         name: 'Rock 1',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-rock.png',
         musics: [{
                                 id: 1,
                                 musicname: 'Music 1',
@@ -69,7 +69,7 @@ export const collections = [
         id: 2,
         name: 'Axe 1',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-axe.png',
         musics: [{
                                 id: 9,
                                 musicname: 'Music 9',
@@ -132,7 +132,7 @@ export const collections = [
         id: 3,
         name: 'Pagode 1',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pagode.png',
         musics: [{
                                 id: 17,
                                 musicname: 'Music 17',
@@ -195,7 +195,7 @@ export const collections = [
         id: 4,
         name: 'Pop 1',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pop.png',
         musics: [{
                                 id: 25,
                                 musicname: 'Music 25',
@@ -258,7 +258,7 @@ export const collections = [
         id: 5,
         name: 'MPB 1',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-mpb.png',
         musics: [{
                                 id: 33,
                                 musicname: 'Music 33',
@@ -326,7 +326,7 @@ export const collections = [
         id: 6,
         name: 'Rock 2',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-rock.png',
         musics: [{
                                 id: 41,
                                 musicname: 'Music 41',
@@ -389,7 +389,7 @@ export const collections = [
         id: 7,
         name: 'Axe 2',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-axe.png',
         musics: [{
                                 id: 49,
                                 musicname: 'Music 49',
@@ -452,7 +452,7 @@ export const collections = [
         id: 8,
         name: 'Pagode 2',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pagode.png',
         musics: [{
                                 id: 57,
                                 musicname: 'Music 57',
@@ -515,7 +515,7 @@ export const collections = [
         id: 9,
         name: 'Pop 2',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pop.png',
         musics: [{
                                 id: 65,
                                 musicname: 'Music 65',
@@ -578,7 +578,7 @@ export const collections = [
         id: 10,
         name: 'MPB 2',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-mpb.png',
         musics: [{
                                 id: 73,
                                 musicname: 'Music 73',
@@ -646,7 +646,7 @@ export const collections = [
         id: 11,
         name: 'Rock 3',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-rock.png',
         musics: [{
                                 id: 81,
                                 musicname: 'Music 81',
@@ -709,7 +709,7 @@ export const collections = [
         id: 12,
         name: 'Axe 3',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-axe.png',
         musics: [{
                                 id: 89,
                                 musicname: 'Music 89',
@@ -772,7 +772,7 @@ export const collections = [
         id: 13,
         name: 'Pagode 3',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pagode.png',
         musics: [{
                                 id: 97,
                                 musicname: 'Music 97',
@@ -835,7 +835,7 @@ export const collections = [
         id: 14,
         name: 'Pop 3',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pop.png',
         musics: [{
                                 id: 105,
                                 musicname: 'Music 105',
@@ -898,7 +898,7 @@ export const collections = [
         id: 15,
         name: 'MPB 3',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-mpb.png',
         musics: [{
                                 id: 113,
                                 musicname: 'Music 113',
@@ -966,7 +966,7 @@ export const collections = [
         id: 16,
         name: 'Rock 4',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-rock.png',
         musics: [{
                                 id: 121,
                                 musicname: 'Music 121',
@@ -1029,7 +1029,7 @@ export const collections = [
         id: 17,
         name: 'Axe 4',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-axe.png',
         musics: [{
                                 id: 129,
                                 musicname: 'Music 129',
@@ -1092,7 +1092,7 @@ export const collections = [
         id: 18,
         name: 'Pagode 4',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pagode.png',
         musics: [{
                                 id: 137,
                                 musicname: 'Music 137',
@@ -1155,7 +1155,7 @@ export const collections = [
         id: 19,
         name: 'Pop 4',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pop.png',
         musics: [{
                                 id: 145,
                                 musicname: 'Music 145',
@@ -1218,7 +1218,7 @@ export const collections = [
         id: 20,
         name: 'MPB 4',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-mpb.png',
         musics: [{
                                 id: 153,
                                 musicname: 'Music 153',
@@ -1286,7 +1286,7 @@ export const collections = [
         id: 21,
         name: 'Rock 5',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-rock.png',
         musics: [{
                                 id: 161,
                                 musicname: 'Music 161',
@@ -1349,7 +1349,7 @@ export const collections = [
         id: 22,
         name: 'Axe 5',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-axe.png',
         musics: [{
                                 id: 169,
                                 musicname: 'Music 169',
@@ -1412,7 +1412,7 @@ export const collections = [
         id: 23,
         name: 'Pagode 5',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pagode.png',
         musics: [{
                                 id: 177,
                                 musicname: 'Music 177',
@@ -1475,7 +1475,7 @@ export const collections = [
         id: 24,
         name: 'Pop 5',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-pop.png',
         musics: [{
                                 id: 185,
                                 musicname: 'Music 185',
@@ -1538,7 +1538,7 @@ export const collections = [
         id: 25,
         name: 'MPB 5',
         desc: 'Lorem ipsum dolor',
-        cover: 'capa-album.png',
+        cover: 'album-mpb.png',
         musics: [{
                                 id: 193,
                                 musicname: 'Music 193',
