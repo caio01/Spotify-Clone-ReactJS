@@ -7,19 +7,7 @@ class Teste extends React.Component {
     };
 
     componentDidMount() {
-        fetch("https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true",
-        {
-            headers : {
-                Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"
-            }
-        })
-        .then(res => res.json())
-        .then(res => res.results)
-        .then(res => {
-            this.setState({
-                linguagens: res
-            });
-        })
+        this.setState({linguagens: getUsers()});
     }
 
     render() {
@@ -41,7 +29,7 @@ class Teste extends React.Component {
             <div>
                 <h1>Login</h1>
                 <input type="text" id="email"/>
-                <button onClick={login()}>Login</button>
+                <button onClick={()=>login()}>Login</button>
                 <h1>Lista de Usuários</h1>
                 {content}
             </div>
@@ -49,8 +37,28 @@ class Teste extends React.Component {
     }
 }
 
-function login() {
-    console.log("a");
+function getUsers() {
+    var users = [];
+
+    fetch("https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true",
+        {
+            headers : {
+                Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"
+            }
+        })
+        .then(res => res.json())
+        .then(res => res.results)
+        .then(res => users = res)
+        .then(res => console.log(res))
+        
+        console.log("Users: ");
+        console.log(users);
+
+        return users;
+}
+
+function login(){
+    getUsers();
 }
 
 export default Teste;
