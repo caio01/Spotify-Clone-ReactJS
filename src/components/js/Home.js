@@ -32,7 +32,7 @@ function Home() {
 				</h3>
 			</div>
 			<div className="section-content-albuns">
-				{playlists?.filter(w=>w.collections[0].id == collection.id).map(playlist=>
+				{playlists?.filter(w=>w.collections[0].id === collection.id).map(playlist=>
 					<div className="section-content-albuns-album">
 						<Link to={`/singleplaylist/${collection.id}/${(playlist.id)}`} className="navbar-brand">
 							<img className="section-content-albuns-album-img" src={playlist.cover} alt="capa-album" />
