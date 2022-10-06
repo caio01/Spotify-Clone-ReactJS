@@ -51,6 +51,24 @@
     font-size: 14px;
 }
 
+.alert-failed {
+    width: 70%;
+    margin: 20px auto;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border-radius: 50px;
+    border-color: white;
+}
+
+.alert-success {
+    width: 70%;
+    margin: 20px auto;
+    background-color: rgb(0, 149, 22);
+    color: white;
+    border-radius: 50px;
+    border-color: white;
+}
+
 .form-cmp > h3{
     font-size: 12pt;
     font-weight: 600;

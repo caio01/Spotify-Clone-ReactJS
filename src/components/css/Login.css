@@ -19,10 +19,20 @@ body {
     margin-bottom: 30px;
 }
 
-.mx-2 {
+.alert {
+    width: 100%;
+    margin: 0 auto 30px 0;
+}
+
+.btn-login {
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    width: 200px;
+    height: 60px;
     background-color: rgb(129, 177, 67);
     color:rgb(0, 0, 0);
     border-radius: 30px;
-    border-color: rgb(166, 211, 107);
-    margin-bottom: 20px;
+    margin: 0 0 10px 0;
+    border-color: rgba(0, 0, 0, 0.409);
 }

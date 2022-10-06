@@ -1,8 +1,9 @@
 import "./../css/SignUp.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { postUser } from "./services/api.js";
 import crypt from "./services/crypt.js";
+import { getUser } from "./services/api.js"
 
 function SignUp() {
 
@@ -14,12 +15,27 @@ function SignUp() {
     const[ monthBirth, setMonthBirth ] = useState('');
     const[ yearBirth, setYearBirth ] = useState('');
     const[ gender, setGender ] = useState('');
+    const[ users, setUsers ] = useState('');
+    const[ alertFailed, setAlertFailed ] = useState(true);
+    const[ alertSuccess, setAlertSuccess ] = useState(true);
+    const[ msgAlert, setMsgAlert ] = useState('');
+
+    useEffect(() => {
+        getUser
+        .then((response) => (
+        setUsers(response.data.results)
+        ))
+    }, []);
 
     function handleSubmit(e) {
 
         e.preventDefault();
 
-        if(email === emailConfirm) {
+        if(users?.filter(u=>u.email === email).length > 0) {
+            setAlertSuccess(true);
+            setAlertFailed(false);
+            setMsgAlert('Email already registered');
+        } else if(email === emailConfirm) {
             const dateBirth = dayBirth.toString() + '/' + monthBirth.toString() + '/' + yearBirth.toString();
             
             const data = {
@@ -31,9 +47,13 @@ function SignUp() {
               }
             postUser(data);
             resetForm();
-            alert('User registered successfully');
+            setAlertSuccess(false);
+            setAlertFailed(true);
+            setMsgAlert('User registered');
         } else {
-            alert('Invalid email confirm');
+            setAlertSuccess(true);
+            setAlertFailed(false);
+            setMsgAlert('Please verify confirm email');
         }
     }
 
@@ -67,13 +87,22 @@ function SignUp() {
                     <div className="div-or">ou</div>
                     <div className="div-line-2"></div>
                 </div>
-                <form onSubmit={e => handleSubmit(e)}>
+                <form onSubmit={e => handleSubmit(e)} id="form">
+                    
+                    <div class="alert alert-failed" hidden={alertFailed}>
+                        <strong>Failed!</strong> {msgAlert}
+                    </div>
+
+                    <div class="alert alert-success" hidden={alertSuccess}>
+                        <strong>Success!</strong> {msgAlert}
+                    </div>
+
                     <div className="div-form">
                         <div className="form-cmp">
                             <h3>Qual é seu email?</h3>
                             <input type="email" placeholder="Insira seu e-mail." value={email} onChange={(e)=>setEmail(e.target.value)}/>
                         </div>
-                        <div className="form-cmp">
+                        <div className="form-cmp" id="emailConfirm">
                             <h3>Confirme seu email</h3>
                             <input type="email" placeholder="Insira o e-mail novamente." value={emailConfirm} onChange={(e)=>setEmailConfirm(e.target.value)}/>
                         </div>
