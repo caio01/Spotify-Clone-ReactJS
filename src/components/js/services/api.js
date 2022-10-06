@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-/*
 export const getCollections = axios({
     method: "GET",
     url: "https://api.baserow.io/api/database/rows/table/103740/?user_field_names=true",
@@ -19,12 +18,11 @@ export const getPlaylists = axios({
 
 export const getMusics = axios({
   method: "GET",
-  url: "https://api.baserow.io/api/database/rows/table/103742/200/?user_field_names=true",
+  url: "https://api.baserow.io/api/database/rows/table/103742/?user_field_names=true&size=200",
   headers: {
     Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"
   }
 });
-*/
 
 export function postUser(data) {
   axios({
