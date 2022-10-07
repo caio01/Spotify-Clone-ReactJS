@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+body {
+    width: 100%;
+}
+
+.tables {
+    text-align: center;
+    margin: 0 auto 50px;
+}
+
+.div-table {
+    display: flex;
+    color: white;
+    width: 100%;
+	background-color: rgb(65, 61, 61);
+	font-family: 'Quicksand', sans-serif;
+}
+
+.table {
+    background-color: rgb(113, 113, 113);
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.title {
+    color: white;
+    margin-top: 30px;
+}
+
+.actions {
+    width: 170px;
+}

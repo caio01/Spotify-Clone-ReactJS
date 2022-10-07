@@ -11,6 +11,7 @@ import SignUp from "./components/js/SignUp.js";
 import Login from "./components/js/Login.js";
 import Footer from "./components/js/Footer.js";
 import SinglePlaylist from "./components/js/SinglePlaylist.js";
+import CRUDAdmin from "./components/js/CRUDAdmin";
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 					<Route path="signup" element={<SignUp />} />
 					<Route path="login" element={<Login />} />
 					<Route path="singleplaylist/:idCollection/:idPlaylist" element={<SinglePlaylist />} />
+					<Route path="crud" element={<CRUDAdmin />} />
 				</Routes>
 			</div>
 			<Footer />
