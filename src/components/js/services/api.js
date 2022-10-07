@@ -43,3 +43,36 @@ export function postUser(data) {
     data : data
   })
 }
+
+export function deleteCollection(id) {
+  axios({
+    method: "DELETE",
+    url: `https://api.baserow.io/api/database/rows/table/103740/${id}/`,
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    }
+  })
+}
+
+export function deletePlaylist(id) {
+  axios({
+    method: "DELETE",
+    url: `https://api.baserow.io/api/database/rows/table/103741/${id}/`,
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    }
+  })
+}
+
+export function deleteMusic(id) {
+  axios({
+    method: "DELETE",
+    url: `https://api.baserow.io/api/database/rows/table/103742/${id}/`,
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    }
+  })
+}

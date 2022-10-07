@@ -2,27 +2,14 @@
 
 body {
     width: 100%;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.tables {
+.card {
     text-align: center;
-    margin: 0 auto 50px;
-}
-
-.div-table {
-    display: flex;
-    color: white;
-    width: 100%;
-	background-color: rgb(65, 61, 61);
-	font-family: 'Quicksand', sans-serif;
-}
-
-.table {
-    background-color: rgb(113, 113, 113);
-    border-radius: 10px;
-    border: none;
-    text-align: center;
-    margin: 0 0 30px 0;
+    margin: 30px auto 50px;
+    background-color: rgb(65, 61, 61);
+    width: 70%;
 }
 
 .title {
@@ -30,6 +17,51 @@ body {
     margin-top: 30px;
 }
 
+.div-table {
+    display: flex;
+    color: white;
+    width: 100%;
+	background-color: rgb(65, 61, 61);
+}
+
+.table {
+    background-color: rgb(216, 216, 216);
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
 .actions {
     width: 170px;
+}
+
+.btn-del {
+    font-size: 14px;
+    background-color: rgb(226, 55, 55);
+    border-radius: 20px;
+    border-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.btn-upd {
+    font-size: 14px;
+    background-color: rgb(101, 98, 228);
+    border-radius: 20px;
+    border-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+  
+.nav-link > a {
+    background-color: blue;
 }

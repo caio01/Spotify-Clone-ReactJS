@@ -7,19 +7,8 @@ function Home() {
 	const [collections, setCollections] = useState();
 	const [playlists, setPlaylists] = useState();
 
-	useEffect(() => {
-		getCollections
-		.then((response) => (
-			setCollections(response.data.results)
-		))
-	}, []);
-
-	useEffect(() => {
-		getPlaylists
-		.then((response) => (
-			setPlaylists(response.data.results)
-		))
-	}, []);
+	useEffect(() => {getCollections.then(response => setCollections(response.data.results))}, []);
+	useEffect(() => {getPlaylists.then(response => setPlaylists(response.data.results))}, []);
 
 	const dataHTML = collections?.map((collection) => (
 		<div>

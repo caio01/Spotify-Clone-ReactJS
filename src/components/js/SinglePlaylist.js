@@ -11,28 +11,9 @@ export default function SinglePlaylist() {
 	const [playlists, setPlaylists] = useState();
 	const [musics, setMusics] = useState();
 
-	useEffect(() => {
-		getCollections
-		.then((response) => (
-			setCollections(response.data.results)
-		))
-	}, []);
-
-	useEffect(() => {
-		getPlaylists
-		.then((response) => (
-			setPlaylists(response.data.results)
-		))
-	}, []);
-
-	useEffect(() => {
-		getMusics
-		.then((response) => (
-			setMusics(response.data.results)
-		))
-	}, []);
-
-	console.log(musics)
+	useEffect(() => {getCollections.then(response => setCollections(response.data.results))}, []);
+	useEffect(() => {getPlaylists.then(response => setPlaylists(response.data.results))}, []);
+	useEffect(() => {getMusics.then(response => setMusics(response.data.results))}, []);
 
 	const musicsHTML = musics?.filter(w=>w.playlists[0].id == idPlaylist).map(music=>
 			<div className="music-audio">
