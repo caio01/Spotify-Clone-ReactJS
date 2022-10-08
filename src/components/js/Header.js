@@ -49,7 +49,7 @@ export default function Header() {
 									</Link>
 								</li>
 								<li className="nav-item">
-									<Link className="nav-link link-support" to="/crud">
+									<Link className="nav-link link-support" to="/listCollections">
 										Admin
 									</Link>
 								</li>

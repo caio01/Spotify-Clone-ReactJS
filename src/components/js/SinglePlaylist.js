@@ -15,7 +15,7 @@ export default function SinglePlaylist() {
 	useEffect(() => {getPlaylists.then(response => setPlaylists(response.data.results))}, []);
 	useEffect(() => {getMusics.then(response => setMusics(response.data.results))}, []);
 
-	const musicsHTML = musics?.filter(w=>w.playlists[0].id == idPlaylist).map(music=>
+	const musicsHTML = musics?.filter(w=>w.playlists.filter(x=>x.id == idPlaylist).length > 0).map(music=>
 			<div className="music-audio">
 				<div className="music">
 					<h3>{music.id}. {music.musicname}</h3>

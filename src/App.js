@@ -11,7 +11,9 @@ import SignUp from "./components/js/SignUp.js";
 import Login from "./components/js/Login.js";
 import Footer from "./components/js/Footer.js";
 import SinglePlaylist from "./components/js/SinglePlaylist.js";
-import CRUDAdmin from "./components/js/CRUDAdmin";
+import ListCollections_CRUD from "./components/js/ListCollections_CRUD.js";
+import ListPlaylists_CRUD from "./components/js/ListPlaylists_CRUD.js";
+import ListMusics_CRUD from "./components/js/ListMusics_CRUD.js";
 
 function App() {
 	return (
@@ -25,7 +27,9 @@ function App() {
 					<Route path="signup" element={<SignUp />} />
 					<Route path="login" element={<Login />} />
 					<Route path="singleplaylist/:idCollection/:idPlaylist" element={<SinglePlaylist />} />
-					<Route path="crud" element={<CRUDAdmin />} />
+					<Route path="listCollections" element={<ListCollections_CRUD />} />
+					<Route path="listPlaylists" element={<ListPlaylists_CRUD />} />
+					<Route path="listMusics" element={<ListMusics_CRUD />} />
 				</Routes>
 			</div>
 			<Footer />

@@ -76,3 +76,39 @@ export function deleteMusic(id) {
     }
   })
 }
+
+export function updateCollection(id, data) {
+  axios({
+    method: "PATCH",
+    url: `https://api.baserow.io/api/database/rows/table/103740/${id}/?user_field_names=true`,
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    },
+    data : data
+  })
+}
+
+export function updatePlaylist(id, data) {
+  axios({
+    method: "PATCH",
+    url: `https://api.baserow.io/api/database/rows/table/103741/${id}/?user_field_names=true`,
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    },
+    data : data
+  })
+}
+
+export function updateMusic(id, data) {
+  axios({
+    method: "PATCH",
+    url: `https://api.baserow.io/api/database/rows/table/103742/${id}/?user_field_names=true`,
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    },
+    data : data
+  })
+}
