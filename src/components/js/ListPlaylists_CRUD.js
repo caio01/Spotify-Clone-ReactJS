@@ -52,6 +52,9 @@ function ListPlaylists_CRUD() {
 					<li class="nav-item">
 						<Link to={'/listMusics'} class="nav-link link">Musics</Link>
 					</li>
+					<li class="nav-item">
+						<Link to={'/listUsers'} class="nav-link link">Users</Link>
+					</li>
 				</ul>
 
 				<img src="./assets/img/plus-circle.svg" class="plus-circle" 

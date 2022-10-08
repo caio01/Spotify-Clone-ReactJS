@@ -14,6 +14,7 @@ import SinglePlaylist from "./components/js/SinglePlaylist.js";
 import ListCollections_CRUD from "./components/js/ListCollections_CRUD.js";
 import ListPlaylists_CRUD from "./components/js/ListPlaylists_CRUD.js";
 import ListMusics_CRUD from "./components/js/ListMusics_CRUD.js";
+import ListUsers_CRUD from "./components/js/ListUsers_CRUD.js";
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 					<Route path="listCollections" element={<ListCollections_CRUD />} />
 					<Route path="listPlaylists" element={<ListPlaylists_CRUD />} />
 					<Route path="listMusics" element={<ListMusics_CRUD />} />
+					<Route path="listUsers" element={<ListUsers_CRUD />} />
 				</Routes>
 			</div>
 			<Footer />

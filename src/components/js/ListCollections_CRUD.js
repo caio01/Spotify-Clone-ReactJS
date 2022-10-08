@@ -9,7 +9,7 @@ function ListCollections_CRUD() {
 	const [collections, setCollections] = useState();
 	const [id, setId] = useState('');
 	const [name, setName] = useState('');
-	const [playlists, setPlaylists] = useState('1,2,3');
+	const [playlists, setPlaylists] = useState('');
 	const [modalTitle, setModalTitle] = useState('');
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
@@ -42,6 +42,9 @@ function ListCollections_CRUD() {
 					</li>
 					<li class="nav-item">
 						<Link to={'/listMusics'} class="nav-link link">Musics</Link>
+					</li>
+					<li class="nav-item">
+						<Link to={'/listUsers'} class="nav-link link">Users</Link>
 					</li>
 				</ul>
 
