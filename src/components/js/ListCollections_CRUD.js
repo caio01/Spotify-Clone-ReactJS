@@ -1,6 +1,6 @@
 import "./../css/List_CRUD.css";
 import React, { useEffect, useState } from "react";
-import { getCollections, deleteCollection, updateCollection } from "./services/api.js"
+import { postCollection, getCollections, deleteCollection, updateCollection } from "./services/api.js"
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -10,6 +10,7 @@ function ListCollections_CRUD() {
 	const [id, setId] = useState('');
 	const [name, setName] = useState('');
 	const [playlists, setPlaylists] = useState('1,2,3');
+	const [modalTitle, setModalTitle] = useState('');
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
@@ -24,8 +25,8 @@ function ListCollections_CRUD() {
 			"name": name,
 			"playlists": aux
 		}
-		console.log(data)
-		updateCollection(id, data);
+		if(modalTitle == 'Update Collection') updateCollection(id, data)
+		else if(modalTitle == 'New Collection') postCollection(data)
 	}
 
 	return (
@@ -43,6 +44,12 @@ function ListCollections_CRUD() {
 						<Link to={'/listMusics'} class="nav-link link">Musics</Link>
 					</li>
 				</ul>
+
+				<img src="./assets/img/plus-circle.svg" class="plus-circle" 
+					onMouseUp={()=>setModalTitle('New Collection')&setId('')
+							      &setName('')&setPlaylists('')}
+					onClick={handleShow}/>
+
 			</div>
 
 			<div class="card-body">
@@ -65,7 +72,7 @@ function ListCollections_CRUD() {
 											<td>{collection.name}</td>
 											<td>{collection.playlists.map(x=>x.value) + " "}</td>
 											<td className="actions"><Button className="btn-upd" variant="primary" 
-												onMouseUp={()=>setId(collection.id)&setName(collection.name)
+												onMouseUp={()=>setModalTitle('Update Collection')&setId(collection.id)&setName(collection.name)
 															  &setPlaylists(String(collection.playlists.map(x=> x.id)))} 
 												onClick={handleShow}>Update</Button> | <button className="btn-del"
 												onClick={()=>deleteCollection(collection.id)}>Delete</button></td>
@@ -81,7 +88,7 @@ function ListCollections_CRUD() {
 			<Modal show={show} onHide={handleClose} >
 				<form onSubmit={e => handleSubmit(e)}>
 					<Modal.Header closeButton>
-					<Modal.Title>Update Collection</Modal.Title>
+					<Modal.Title>{modalTitle}</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
 							<p>{"Id: " + id}</p>

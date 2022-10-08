@@ -112,3 +112,39 @@ export function updateMusic(id, data) {
     data : data
   })
 }
+
+export function postCollection(data) {
+  axios({
+    method: "POST",
+    url: "https://api.baserow.io/api/database/rows/table/103740/?user_field_names=true",
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    },
+    data : data
+  })
+}
+
+export function postPlaylist(data) {
+  axios({
+    method: "POST",
+    url: "https://api.baserow.io/api/database/rows/table/103741/?user_field_names=true",
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    },
+    data : data
+  })
+}
+
+export function postMusic(data) {
+  axios({
+    method: "POST",
+    url: "https://api.baserow.io/api/database/rows/table/103742/?user_field_names=true",
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    },
+    data : data
+  })
+}

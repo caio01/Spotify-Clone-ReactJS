@@ -1,6 +1,6 @@
 import "./../css/List_CRUD.css";
 import React, { useEffect, useState } from "react";
-import { getMusics, deleteMusic, updateMusic } from "./services/api.js"
+import { postMusic, getMusics, deleteMusic, updateMusic } from "./services/api.js"
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -13,6 +13,7 @@ function ListMusics_CRUD() {
 	const [album, setAlbum] = useState('');
 	const [src, setSrc] = useState('');
 	const [playlists, setPlaylists] = useState('');
+	const [modalTitle, setModalTitle] = useState('');
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
@@ -30,7 +31,8 @@ function ListMusics_CRUD() {
 			"src": src,
 			"playlists": aux
 		}
-		updateMusic(id, data);
+		if(modalTitle == 'Update Music') updateMusic(id, data)
+		else if(modalTitle == 'New Music') postMusic(data)
 	}
 
 	return (
@@ -48,6 +50,12 @@ function ListMusics_CRUD() {
 						<Link to={'#'} class="nav-link active">Musics</Link>
 					</li>
 				</ul>
+
+				<img src="./assets/img/plus-circle.svg" class="plus-circle" 
+					onMouseUp={()=>setModalTitle('New Music')&setId('')&setName()&setAuthor()
+								  &setAlbum()&setSrc()&setPlaylists()}
+					onClick={handleShow}/>
+
 			</div>
 
 			<div class="card-body">
@@ -74,8 +82,8 @@ function ListMusics_CRUD() {
 											<td>{music.album}</td>
 											<td>{music.playlists.map(x=>x.value) + " "}</td>
 											<td className="actions"><Button className="btn-upd" variant="primary" 
-											onMouseUp={()=>setId(music.id)&setName(music.musicname)&setAuthor(music.author)&setAlbum(music.album)
-														  &setSrc(music.src)&setPlaylists(String(music.playlists.map(x=> x.id)))}
+											onMouseUp={()=>setModalTitle('Update Music')&setId(music.id)&setName(music.musicname)&setAuthor(music.author)
+														  &setAlbum(music.album)&setSrc(music.src)&setPlaylists(String(music.playlists.map(x=> x.id)))}
 											onClick={handleShow}>Update</Button> | <button className="btn-del" 
 											onClick={()=>deleteMusic(music.id)}>Delete</button></td>
 											</tr>
@@ -90,7 +98,7 @@ function ListMusics_CRUD() {
 			<Modal show={show} onHide={handleClose} >
 				<form onSubmit={e => handleSubmit(e)}>
 					<Modal.Header closeButton>
-					<Modal.Title>Update Collection</Modal.Title>
+					<Modal.Title>{modalTitle}</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
 							<p>{"Id: " + id}</p>

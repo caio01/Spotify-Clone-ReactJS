@@ -1,6 +1,6 @@
 import "./../css/List_CRUD.css";
 import React, { useEffect, useState } from "react";
-import { getPlaylists, deletePlaylist, updatePlaylist } from "./services/api.js"
+import { postPlaylist, getPlaylists, deletePlaylist, updatePlaylist } from "./services/api.js"
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -13,6 +13,7 @@ function ListPlaylists_CRUD() {
 	const [cover, setCover] = useState('');
 	const [musics, setMusics] = useState('');
 	const [collections, setCollections] = useState('');
+	const [modalTitle, setModalTitle] = useState('');
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
@@ -32,8 +33,9 @@ function ListPlaylists_CRUD() {
 			"musics": aux,
 			"collections": aux2
 		}
-		console.log(data)
-		updatePlaylist(id, data);
+		if(modalTitle == 'Update Playlist') updatePlaylist(id, data)
+		else if(modalTitle == 'New Playlist') postPlaylist(data)
+		
 	}
 
 	return (
@@ -51,6 +53,12 @@ function ListPlaylists_CRUD() {
 						<Link to={'/listMusics'} class="nav-link link">Musics</Link>
 					</li>
 				</ul>
+
+				<img src="./assets/img/plus-circle.svg" class="plus-circle" 
+					onMouseUp={()=>setModalTitle('New Playlist')&setId('')&setName()&setDesc()
+								  &setCover()&setMusics()&setCollections()}
+					onClick={handleShow}/>
+
 			</div>
 
 			<div class="card-body">
@@ -77,7 +85,7 @@ function ListPlaylists_CRUD() {
 											<td>{playlist.musics.map(x=>x.value) + " "}</td>
 											<td>{playlist.collections.map(x=>x.value) + " "}</td>
 											<td className="actions"><Button className="btn-upd" variant="primary" 
-											onMouseUp={()=>setId(playlist.id)&setName(playlist.name)&setDesc(playlist.desc)
+											onMouseUp={()=>setModalTitle('Update Playlist')&setId(playlist.id)&setName(playlist.name)&setDesc(playlist.desc)
 												          &setCover(playlist.cover)&setMusics(String(playlist.musics.map(x=> x.id)))
 													      &setCollections(String(playlist.collections.map(x=> x.id)))} 
 											onClick={handleShow}>Update</Button> | <button className="btn-del" 
@@ -94,7 +102,7 @@ function ListPlaylists_CRUD() {
 			<Modal show={show} onHide={handleClose} >
 				<form onSubmit={e => handleSubmit(e)}>
 					<Modal.Header closeButton>
-					<Modal.Title>Update Collection</Modal.Title>
+					<Modal.Title>{modalTitle}</Modal.Title>
 					</Modal.Header>
 					<Modal.Body>
 							<p>{"Id: " + id}</p>
