@@ -19,7 +19,6 @@ function ListPlaylists_CRUD() {
 	const handleShow = () => setShow(true);
 
 	useEffect(() => {getPlaylists.then(response => setPlaylists(response.data.results))}, []);
-	console.log(playlists)
 
 	function handleSubmit(e) {
 		e.preventDefault()
