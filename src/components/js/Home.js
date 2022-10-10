@@ -10,8 +10,6 @@ function Home() {
 	useEffect(() => {getCollections.then(response => setCollections(response.data.results))}, []);
 	useEffect(() => {getPlaylists.then(response => setPlaylists(response.data.results))}, []);
 
-	console.log(playlists?.filter(w=>w.collections.filter(x=>x.id == 11).length > 0))
-
 	const dataHTML = collections?.map((collection) => (
 		<div>
 			<div className="section-content-title">
