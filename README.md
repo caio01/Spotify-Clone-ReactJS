@@ -1,1 +1,1 @@
-Clone Spotify using React
+Publish in https://caio01.github.io/spotify-react/
