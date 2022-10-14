@@ -27,7 +27,7 @@ function App() {
 					<Route path="support" element={<Support />} />
 					<Route path="signup" element={<SignUp />} />
 					<Route path="login" element={<Login />} />
-					<Route path="singleplaylist/:idCollection/:idPlaylist" element={<SinglePlaylist />} />
+					<Route path="singleplaylist/:idPlaylist" element={<SinglePlaylist />} />
 					<Route path="listCollections" element={<ListCollections_CRUD />} />
 					<Route path="listPlaylists" element={<ListPlaylists_CRUD />} />
 					<Route path="listMusics" element={<ListMusics_CRUD />} />
