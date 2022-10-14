@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
 
+.menu-user {
+    display: flex;
+    color: white;
+}
+
+.menu-user > p {
+    font-size: 20px;
+    margin: 20px auto;
+} 
+
 a {
     color: rgb(155, 139, 139);
     text-decoration: none;

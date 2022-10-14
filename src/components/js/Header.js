@@ -1,7 +1,25 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./../css/Header.css";
 
 export default function Header() {
+
+	const[ userLogged, setUserLogged ] = useState()
+	const[ iconUser, setIconUser ] = useState(false)
+
+	useEffect(()=>{
+		if(localStorage.length > 0) {
+		setUserLogged(JSON.parse(localStorage.getItem("userLogged"))[0].name)
+		setIconUser(true)
+		}
+	}, [])
+
+	function logout() {
+		localStorage.removeItem("userLogged")
+		setUserLogged()
+		setIconUser(false)
+	}
+
 	return (
 		<>
 			<header>
@@ -55,6 +73,19 @@ export default function Header() {
 								</li>
 							</ul>
 						</div>
+						<ul className="ul-user">
+							<li className="nav-item dropdown" hidden={!iconUser}>
+								<a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									{userLogged}
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a className="dropdown-item"><Link to={"/"}>Ação</Link></a>
+									<a className="dropdown-item"><Link to={"/"}>Outra ação</Link></a>
+								<div class="dropdown-divider"></div>
+									<a className="dropdown-item" onClick={logout}>Logout</a>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</nav>
 			</header>

@@ -157,6 +157,17 @@ export const getUser = axios({
   }
 });
 
+export function getUserEmail(email) {
+  axios({
+    method: "GET",
+    url: `https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true&filter__field_650507__equal=${email}`,
+    headers: {
+      Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh",
+      "Content-Type": "application/json"
+    }
+  })
+}
+
 export function updateUser(id, data) {
   axios({
     method: "PATCH",

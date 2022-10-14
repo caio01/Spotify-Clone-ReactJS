@@ -25,3 +25,18 @@ a.navbar-brand svg {
 nav.navbar a:hover {
 	color: #1ed760;
 }
+
+.userLogged {
+	font-size: 20px;
+	color: white;
+}
+
+.ul-user {
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+.logout {
+	color: white;
+}

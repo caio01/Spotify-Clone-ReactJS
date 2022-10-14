@@ -32,8 +32,8 @@ function ListPlaylists_CRUD() {
 			"musics": aux,
 			"collections": aux2
 		}
-		if(modalTitle == 'Update Playlist') updatePlaylist(id, data)
-		else if(modalTitle == 'New Playlist') postPlaylist(data)
+		if(modalTitle === 'Update Playlist') updatePlaylist(id, data)
+		else if(modalTitle === 'New Playlist') postPlaylist(data)
 		
 	}
 
@@ -56,7 +56,7 @@ function ListPlaylists_CRUD() {
 					</li>
 				</ul>
 
-				<img src="./assets/img/plus-circle.svg" class="plus-circle" 
+				<img src="./assets/img/plus-circle.svg" class="plus-circle" alt='album-playlist' 
 					onMouseUp={()=>setModalTitle('New Playlist')&setId('')&setName()&setDesc()
 								  &setCover()&setMusics()&setCollections()}
 					onClick={handleShow}/>

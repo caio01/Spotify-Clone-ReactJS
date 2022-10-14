@@ -18,7 +18,7 @@ export default function Footer() {
 							<li className="comunidades__item--title">COMUNIDADES</li>
 							<li className="comunidades__item">Para Artistas</li>
 							<li className="comunidades__item">Desenvolvedores</li>
-							<li className="comunidades__item">Pucblicidade</li>
+							<li className="comunidades__item">Publicidade</li>
 							<li className="comunidades__item">Investidores</li>
 							<li className="comunidades__item">Fornecedores</li>
 						</ul>
