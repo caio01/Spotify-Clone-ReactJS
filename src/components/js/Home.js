@@ -10,6 +10,9 @@ function Home() {
 	useEffect(() => {getCollections.then(response => setCollections(response.data.results))}, []);
 	useEffect(() => {getPlaylists.then(response => setPlaylists(response.data.results))}, []);
 
+	let user;
+	if(localStorage.length > 0) user = JSON.parse(localStorage.getItem("userLogged"))[0]
+
 	const dataHTML = collections?.map((collection) => (
 		<div>
 			<div className="section-content-title">
@@ -30,7 +33,7 @@ function Home() {
 					})
 				.map(playlist=>
 					<div className="section-content-albuns-album">
-						<Link to={`/singleplaylist/${collection.id}/${(playlist.id)}`} className="navbar-brand">
+						<Link to={`/singleplaylist/${(playlist.id)}`} className="navbar-brand">
 							<img className="section-content-albuns-album-img" src={playlist.cover} alt="capa-album" />
 							<h3>
 								{playlist.name}
@@ -45,18 +48,18 @@ function Home() {
 		</div>
 	))
 
-	const dataUserHTML = 
+	const dataUserHTML = (
 		<div>
 			<div className="section-content-title">
 				<h1>
-					Playlists do Usuário
+					Playlists do {user.name}
 				</h1>
 				<h3>
 					<Link to="#">VER TUDO</Link>
 				</h3>
 			</div>
 			<div className="section-content-albuns">
-				{playlists?.filter(x=>x).length > 0
+				{playlists?.filter(w=>w.users.filter(x=>x.id === user.id).length > 0)
 				.sort(
 					function(x,y){
 						let a = x.name.toUpperCase(),
@@ -65,7 +68,7 @@ function Home() {
 					})
 				.map(playlist=>
 					<div className="section-content-albuns-album">
-						<Link to={`/singleplaylist/${collection.id}/${(playlist.id)}`} className="navbar-brand">
+						<Link to={`/singleplaylist/${(playlist.id)}`} className="navbar-brand">
 							<img className="section-content-albuns-album-img" src={playlist.cover} alt="capa-album" />
 							<h3>
 								{playlist.name}
@@ -78,6 +81,7 @@ function Home() {
 				)}
 			</div>
 		</div>
+	)
 
 	if(localStorage.length > 0) {
 		return (
