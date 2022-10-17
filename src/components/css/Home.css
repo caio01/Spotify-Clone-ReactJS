@@ -2,13 +2,18 @@
 
 .menu-user {
     display: flex;
-    color: white;
+    color: rgb(155, 139, 139);
 }
 
-.menu-user > p {
+.menu-user > h3 {
     font-size: 20px;
     margin: 20px auto;
-} 
+}
+
+.menu-user > h3:hover {
+    transition: 0.5s;
+    color: white;
+}
 
 a {
     color: rgb(155, 139, 139);
