@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 import "./../css/Header.css";
 
 export default function Header() {
@@ -19,6 +21,11 @@ export default function Header() {
 		setUserLogged()
 		setIconUser(false)
 	}
+
+	const options = [
+		'one', 'two', 'three'
+	  ];
+	var defaultOption
 
 	return (
 		<>
@@ -73,19 +80,7 @@ export default function Header() {
 								</li>
 							</ul>
 						</div>
-						<ul className="ul-user">
-							<li className="nav-item dropdown" hidden={!iconUser}>
-								<a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									{userLogged}
-								</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a className="dropdown-item"><Link to={"/"}>Ação</Link></a>
-									<a className="dropdown-item"><Link to={"/"}>Outra ação</Link></a>
-								<div class="dropdown-divider"></div>
-									<a className="dropdown-item" onClick={logout}>Logout</a>
-								</div>
-							</li>
-						</ul>
+						<p className="logout">Logout</p>	
 					</div>
 				</nav>
 			</header>

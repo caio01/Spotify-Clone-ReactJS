@@ -28,6 +28,15 @@ a:hover {
     color: #bab9b9;
 }
 
+.desc-playlist > p {
+    margin-top: 60%;
+    color: #bab9b9;
+}
+
+.desc-playlist > p:hover {
+    color: white;
+}
+
 .album-img {
     width: 200px;
     height: 200px;
