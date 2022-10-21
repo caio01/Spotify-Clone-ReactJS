@@ -1,24 +1,30 @@
-import "./../css/List_CRUD.css";
-import React, { useEffect, useState } from "react";
-import { postPlaylist, getPlaylists, deletePlaylist, updatePlaylist } from "./services/api.js"
-import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import "./../css/List_CRUD.css"
+import React, { useEffect, useState } from "react"
+import { postPlaylist, deletePlaylist, updatePlaylist } from "./services/api.js"
+import { Link } from "react-router-dom"
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+import axios from "axios"
 
 function ListPlaylists_CRUD() {
-	const [playlists, setPlaylists] = useState();
-	const [id, setId] = useState('');
-	const [name, setName] = useState('');
-	const [desc, setDesc] = useState('');
-	const [cover, setCover] = useState('');
-	const [musics, setMusics] = useState('');
-	const [collections, setCollections] = useState('');
-	const [modalTitle, setModalTitle] = useState('');
-	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+	const config = {headers: {Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"}}
 
-	useEffect(() => {getPlaylists.then(response => setPlaylists(response.data.results))}, []);
+	const [playlists, setPlaylists] = useState()
+	const [id, setId] = useState('')
+	const [name, setName] = useState('')
+	const [desc, setDesc] = useState('')
+	const [cover, setCover] = useState('')
+	const [musics, setMusics] = useState('')
+	const [collections, setCollections] = useState('')
+	const [modalTitle, setModalTitle] = useState('')
+	const [show, setShow] = useState(false)
+	const handleClose = () => setShow(false)
+	const handleShow = () => setShow(true)
+
+	useEffect(() => {
+		axios.get("https://api.baserow.io/api/database/rows/table/103741/?user_field_names=true", config)
+		.then(response => setPlaylists(response.data.results))
+	}, [handleClose])
 
 	function handleSubmit(e) {
 		e.preventDefault()
@@ -127,7 +133,7 @@ function ListPlaylists_CRUD() {
 
 
 		</div>
-	);
+	)
 }
 
-export default ListPlaylists_CRUD;
+export default ListPlaylists_CRUD

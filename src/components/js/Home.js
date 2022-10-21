@@ -1,10 +1,11 @@
 import "./../css/Home.css"
 import { Link } from "react-router-dom"
 import React, { useEffect, useState } from "react"
-import { getCollections, getPlaylists, getUser, updateUser, postPlaylist } from "./services/api"
+import { config, updateUser, postPlaylist } from "./services/api"
 import { encrypt, decrypt } from "./services/crypt"
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
+import axios from "axios"
 
 function Home() {
 	const [collections, setCollections] = useState()
@@ -30,9 +31,18 @@ function Home() {
 	const handleClosePlaylist = () => setShowPlaylist(false)
 	const handleShowPlaylist = () => setShowPlaylist(true)
 
-	useEffect(() => {getUser.then(response => setUsers(response.data.results))}, [])
-	useEffect(() => {getCollections.then(response => setCollections(response.data.results))}, [])
-	useEffect(() => {getPlaylists.then(response => setPlaylists(response.data.results))}, [playlists])
+	useEffect(() => {
+		axios.get("https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true", config)
+		.then(response => setUsers(response.data.results))
+	}, [handleClose])
+	useEffect(() => {
+		axios.get("https://api.baserow.io/api/database/rows/table/103740/?user_field_names=true", config)
+		.then(response => setCollections(response.data.results))
+	}, [])
+	useEffect(() => {
+		axios.get("https://api.baserow.io/api/database/rows/table/103741/?user_field_names=true", config)
+		.then(response => setPlaylists(response.data.results))
+	}, [handleClose])
 
 	let user;
 	if(localStorage.length > 0) user = JSON.parse(localStorage.getItem("userLogged"))[0]

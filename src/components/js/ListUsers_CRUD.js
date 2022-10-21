@@ -1,25 +1,31 @@
-import "./../css/List_CRUD.css";
-import React, { useEffect, useState } from "react";
-import { postUser, getUser, deleteUser, updateUser } from "./services/api.js"
-import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import { encrypt, decrypt } from './services/crypt.js';
+import "./../css/List_CRUD.css"
+import React, { useEffect, useState } from "react"
+import { postUser, deleteUser, updateUser } from "./services/api.js"
+import { Link } from "react-router-dom"
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+import { encrypt, decrypt } from './services/crypt.js'
+import axios from "axios"
 
 function ListUsers_CRUD() {
-	const [users, setUsers] = useState();
-	const [id, setId] = useState('');
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	const [dateBirth, setDateBirth] = useState('');
-	const [gender, setGender] = useState('');
-	const [modalTitle, setModalTitle] = useState('');
-	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+	const config = {headers: {Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"}}
+	
+	const [users, setUsers] = useState()
+	const [id, setId] = useState('')
+	const [name, setName] = useState('')
+	const [email, setEmail] = useState('')
+	const [password, setPassword] = useState('')
+	const [dateBirth, setDateBirth] = useState('')
+	const [gender, setGender] = useState('')
+	const [modalTitle, setModalTitle] = useState('')
+	const [show, setShow] = useState(false)
+	const handleClose = () => setShow(false)
+	const handleShow = () => setShow(true)
 
-	useEffect(() => {getUser.then(response => setUsers(response.data.results))}, []);
+	useEffect(() => {
+		axios.get("https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true", config)
+		.then(response => setUsers(response.data.results))
+	}, [handleClose])
 
 	function handleSubmit(e) {
 		e.preventDefault()
@@ -124,7 +130,7 @@ function ListUsers_CRUD() {
 
 
 		</div>
-	);
+	)
 }
 
-export default ListUsers_CRUD;
+export default ListUsers_CRUD

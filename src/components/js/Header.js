@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
-import "./../css/Header.css";
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+import 'react-dropdown/style.css'
+import "./../css/Header.css"
 
 export default function Header() {
 
@@ -11,21 +10,16 @@ export default function Header() {
 
 	useEffect(()=>{
 		if(localStorage.length > 0) {
-		setUserLogged(JSON.parse(localStorage.getItem("userLogged"))[0].name)
-		setIconUser(true)
+			setUserLogged(JSON.parse(localStorage.getItem("userLogged"))[0].name)
+			setIconUser(true)
 		}
-	}, [])
+	}, [userLogged])
 
 	function logout() {
 		localStorage.removeItem("userLogged")
 		setUserLogged()
 		setIconUser(false)
 	}
-
-	const options = [
-		'one', 'two', 'three'
-	  ];
-	var defaultOption
 
 	return (
 		<>
@@ -80,10 +74,10 @@ export default function Header() {
 								</li>
 							</ul>
 						</div>
-						<p className="logout">Logout</p>	
+						<Link to="#" className="logout" hidden={!iconUser} onClick={logout}>Logout</Link>	
 					</div>
 				</nav>
 			</header>
 		</>
-	);
+	)
 }

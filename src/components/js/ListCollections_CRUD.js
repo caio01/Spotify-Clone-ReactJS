@@ -1,21 +1,27 @@
-import "./../css/List_CRUD.css";
-import React, { useEffect, useState } from "react";
-import { postCollection, getCollections, deleteCollection, updateCollection } from "./services/api.js"
-import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import "./../css/List_CRUD.css"
+import React, { useEffect, useState } from "react"
+import { postCollection, deleteCollection, updateCollection } from "./services/api.js"
+import { Link } from "react-router-dom"
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+import axios from "axios"
 
 function ListCollections_CRUD() {
-	const [collections, setCollections] = useState();
-	const [id, setId] = useState('');
-	const [name, setName] = useState('');
-	const [playlists, setPlaylists] = useState('');
-	const [modalTitle, setModalTitle] = useState('');
-	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+	const config = {headers: {Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"}}
 
-	useEffect(() => {getCollections.then(response => setCollections(response.data.results))}, []);
+	const [collections, setCollections] = useState()
+	const [id, setId] = useState('')
+	const [name, setName] = useState('')
+	const [playlists, setPlaylists] = useState('')
+	const [modalTitle, setModalTitle] = useState('')
+	const [show, setShow] = useState(false)
+	const handleClose = () => setShow(false)
+	const handleShow = () => setShow(true)
+
+	useEffect(() => {
+		axios.get("https://api.baserow.io/api/database/rows/table/103740/?user_field_names=true", config)
+		.then(response => setCollections(response.data.results))
+	}, [handleClose])
 
 	function handleSubmit(e) {
 		e.preventDefault()
@@ -111,7 +117,7 @@ function ListCollections_CRUD() {
 
 
 		</div>
-	);
+	)
 }
 
-export default ListCollections_CRUD;
+export default ListCollections_CRUD

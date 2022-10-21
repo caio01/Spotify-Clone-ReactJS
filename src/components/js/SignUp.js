@@ -1,11 +1,12 @@
-import "./../css/SignUp.css";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { postUser } from "./services/api.js";
-import crypt from "./services/crypt.js";
-import { getUser } from "./services/api.js"
+import "./../css/SignUp.css"
+import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { postUser } from "./services/api.js"
+import crypt from "./services/crypt.js"
+import axios from "axios"
 
 function SignUp() {
+    const config = {headers: {Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"}}
 
     const[ email, setEmail ] = useState('');
     const[ emailConfirm, setEmailConfirm ] = useState('');
@@ -21,11 +22,9 @@ function SignUp() {
     const[ msgAlert, setMsgAlert ] = useState('');
 
     useEffect(() => {
-        getUser
-        .then((response) => (
-        setUsers(response.data.results)
-        ))
-    }, []);
+		axios.get("https://api.baserow.io/api/database/rows/table/103692/?user_field_names=true", config)
+		.then(response => setUsers(response.data.results))
+	}, [])
 
     function handleSubmit(e) {
 

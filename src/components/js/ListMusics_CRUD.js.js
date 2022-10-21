@@ -1,24 +1,30 @@
-import "./../css/List_CRUD.css";
-import React, { useEffect, useState } from "react";
+import "./../css/List_CRUD.css"
+import React, { useEffect, useState } from "react"
 import { postMusic, getMusics, deleteMusic, updateMusic } from "./services/api.js"
-import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import { Link } from "react-router-dom"
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
+import axios from "axios"
 
 function ListMusics_CRUD() {
-	const [musics, setMusics] = useState();
-	const [id, setId] = useState('');
-	const [name, setName] = useState('');
-	const [author, setAuthor] = useState('');
-	const [album, setAlbum] = useState('');
-	const [src, setSrc] = useState('');
-	const [playlists, setPlaylists] = useState('');
-	const [modalTitle, setModalTitle] = useState('');
-	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+	const config = {headers: {Authorization: "Token 86e2Mv0sDRaFtuwMdnzxMD9D99wgYEYh"}}
 
-	useEffect(() => {getMusics.then(response => setMusics(response.data.results))}, []);
+	const [musics, setMusics] = useState()
+	const [id, setId] = useState('')
+	const [name, setName] = useState('')
+	const [author, setAuthor] = useState('')
+	const [album, setAlbum] = useState('')
+	const [src, setSrc] = useState('')
+	const [playlists, setPlaylists] = useState('')
+	const [modalTitle, setModalTitle] = useState('')
+	const [show, setShow] = useState(false)
+	const handleClose = () => setShow(false)
+	const handleShow = () => setShow(true)
+
+	useEffect(() => {
+		axios.get("https://api.baserow.io/api/database/rows/table/103742/?user_field_names=true", config)
+		.then(response => setMusics(response.data.results))
+	}, [handleClose])
 
 	function handleSubmit(e) {
 		e.preventDefault()
@@ -124,7 +130,7 @@ function ListMusics_CRUD() {
 
 
 		</div>
-	);
+	)
 }
 
-export default ListMusics_CRUD;
+export default ListMusics_CRUD
