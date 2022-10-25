@@ -31,15 +31,25 @@ function ListPlaylists_CRUD() {
 		var aux = (musics.split(',')).map(x=>(parseInt(x)))
 		var aux2 = (collections.split(',')).map(x=>(parseInt(x)))
 		
-		const data = {
-			"name": name,
-			"desc": desc,
-			"cover": cover,
-			"musics": aux,
-			"collections": aux2
+		var data = {}
+		
+		if(collections.length == 0) {
+			data = {
+				"name": name,
+				"desc": desc,
+				"cover": cover,
+				"musics": aux
+			}
+		} else {
+			data = {
+				"name": name,
+				"desc": desc,
+				"cover": cover,
+				"musics": aux,
+				"collections": aux2
+			}
 		}
-		if(modalTitle === 'Update Playlist') updatePlaylist(id, data)
-		else if(modalTitle === 'New Playlist') postPlaylist(data)
+		modalTitle === 'Update Playlist' ? updatePlaylist(id, data) : postPlaylist(data)
 		
 	}
 

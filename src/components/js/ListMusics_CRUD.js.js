@@ -22,7 +22,7 @@ function ListMusics_CRUD() {
 	const handleShow = () => setShow(true)
 
 	useEffect(() => {
-		axios.get("https://api.baserow.io/api/database/rows/table/103742/?user_field_names=true", config)
+		axios.get("https://api.baserow.io/api/database/rows/table/103742/?user_field_names=true&size=200", config)
 		.then(response => setMusics(response.data.results))
 	}, [handleClose])
 
