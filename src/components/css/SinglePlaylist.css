@@ -28,9 +28,8 @@ a:hover {
     color: #bab9b9;
 }
 
-.desc-playlist > p {
+.edit-play > p {
     margin-top: 60%;
-    color: #bab9b9;
 }
 
 .desc-playlist > p:hover {
@@ -77,4 +76,14 @@ a:hover {
 .audio-play {
     float: right;
     margin: 8px 20px 0 0;
+}
+
+.modal-title {
+    display: flex;
+}
+
+.input-search {
+    margin-left: 70vh;
+    padding-left: 10px;
+    font-size: 16px;
 }
